@@ -6,13 +6,12 @@ class CalendarView extends GetView {
   const CalendarView({super.key});
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
+      appBar: AppBar(),
       // TODO : calendar view
-      body: Center(
-        child: Text(
-          'CalendarView is working',
-          style: TextStyle(fontSize: 20),
-        ),
+
+      body: Expanded(
+        child: Container(),
       ),
     );
   }

@@ -23,6 +23,9 @@ Future<void> main() async {
   runApp(
     GetMaterialApp(
       title: "Application",
+      theme: ThemeData(
+        colorSchemeSeed: Colors.blue,
+      ),
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
     ),

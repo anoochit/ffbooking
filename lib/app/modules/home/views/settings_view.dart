@@ -7,9 +7,12 @@ class SettingsView extends GetView {
   const SettingsView({super.key});
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: SignOutButton(),
+    return Scaffold(
+      appBar: AppBar(),
+      body: Expanded(
+        child: Center(
+          child: SignOutButton(),
+        ),
       ),
     );
   }

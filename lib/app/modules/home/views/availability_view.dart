@@ -6,12 +6,10 @@ class AvailabilityView extends GetView {
   const AvailabilityView({super.key});
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text(
-          'AvailabilityView is working',
-          style: TextStyle(fontSize: 20),
-        ),
+    return Scaffold(
+      appBar: AppBar(),
+      body: Expanded(
+        child: Container(),
       ),
     );
   }
