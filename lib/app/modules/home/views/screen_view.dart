@@ -1,7 +1,6 @@
-import 'package:ffbooking/app/modules/home/views/navigation_view.dart';
+import 'package:ffbooking/app/modules/home/views/navigationrail_view.dart';
 import 'package:ffbooking/app/modules/home/views/stack_view.dart';
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 
 import 'package:get/get.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -12,28 +11,25 @@ class ScreenView extends GetView {
   Widget build(BuildContext context) {
     final deviceType = getDeviceType(MediaQuery.of(context).size);
 
-    return Scaffold(
-      body: Flex(
+    if (deviceType == DeviceScreenType.mobile) {
+      return const StackView();
+    } else {
+      return Flex(
         direction: Axis.horizontal,
         children: [
           const Flexible(
             flex: 1,
-            child: NavigationView(),
+            child: NavigationRailView(),
           ),
           const VerticalDivider(
             width: 1,
           ),
-          const Gap(16.0),
           Flexible(
-            flex: (deviceType == DeviceScreenType.tablet)
-                ? 6
-                : (deviceType == DeviceScreenType.mobile)
-                    ? 4
-                    : 5,
+            flex: (deviceType == DeviceScreenType.tablet) ? 6 : 5,
             child: const StackView(),
           ),
         ],
-      ),
-    );
+      );
+    }
   }
 }

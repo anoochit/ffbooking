@@ -25,6 +25,9 @@ Future<void> main() async {
       title: "Application",
       theme: ThemeData(
         colorSchemeSeed: Colors.blue,
+        appBarTheme: const AppBarTheme(
+          elevation: 5.0,
+        ),
       ),
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
