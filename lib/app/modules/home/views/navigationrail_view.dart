@@ -13,15 +13,12 @@ class NavigationRailView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Obx(
       () => NavigationRail(
-        extended: ((controller.screenType.value == DeviceScreenType.tablet) ||
-                (controller.screenType.value == DeviceScreenType.mobile))
+        extended: ((controller.screenType.value == DeviceScreenType.tablet))
             ? false
             : true,
         labelType: (controller.screenType.value == DeviceScreenType.tablet)
-            ? NavigationRailLabelType.all
-            : (controller.screenType == DeviceScreenType.mobile)
-                ? NavigationRailLabelType.none
-                : null,
+            ? NavigationRailLabelType.none
+            : null,
         onDestinationSelected: (value) => controller.navIndex.value = value,
         selectedLabelTextStyle: TextStyle(
           fontWeight: FontWeight.bold,

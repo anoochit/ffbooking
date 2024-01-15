@@ -14,9 +14,9 @@ class StackView extends GetView<HomeController> {
       () => IndexedStack(
         index: controller.navIndex.value,
         children: const [
-          CalendarView(),
-          AvailabilityView(),
-          SettingsView(),
+          CalendarPageView(),
+          AvailabilityPageView(),
+          SettingsPageView(),
         ],
       ),
     );

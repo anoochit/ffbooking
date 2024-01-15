@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-class AvailabilityView extends GetView<HomeController> {
-  const AvailabilityView({super.key});
+class AvailabilityPageView extends GetView<HomeController> {
+  const AvailabilityPageView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -5,19 +5,22 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-class CalendarView extends GetView<HomeController> {
-  const CalendarView({super.key});
+class CalendarPageView extends GetView<HomeController> {
+  const CalendarPageView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Calendar'),
       ),
-      // TODO : calendar view
+      // TODO : add calendar view
       body: Container(),
+
       drawer: (controller.screenType.value == DeviceScreenType.mobile)
           ? const NavigationDrawerView()
           : null,
     );
   }
+
+  // TODO : add mockup datasource
 }
